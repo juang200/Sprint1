@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="the user can create a new user" skipped="0" tests="1" time="44.64" timestamp="2023-01-14 01:15:22"><testcase name="cancel the creation of new user"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+Stepsdefinitions.CrearUsuarioSteps.heCancelTheCreateUserAction(CrearUsuarioSteps.java:69)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

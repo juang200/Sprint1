@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Perform the Login in the Neat administration page" skipped="0" tests="1" time="38.82" timestamp="2022-12-04 06:38:06"><testcase name="User create a new menu"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+Tasks.Crearmenu.performAs(Crearmenu.java:26)&#13;
+Stepsdefinitions.LoginSteps.heCompleteTheRegisterAndSaveTheNewMenu(LoginSteps.java:82)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

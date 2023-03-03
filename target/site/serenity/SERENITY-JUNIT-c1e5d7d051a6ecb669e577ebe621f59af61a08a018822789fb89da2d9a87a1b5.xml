@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="the user can create a new rol" skipped="0" tests="1" time="35.85" timestamp="2022-12-27 01:22:56"><testcase name="Delate a rol"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+Stepsdefinitions.CrearRolSteps.heDelateARole(CrearRolSteps.java:163)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="82e675925687026cdd16947492698e315a2051c9e04048627e1569531ebb5570.html">The User Can Create A New User</a></span>
+                > <span class="truncate-60"><a
+                    href="aecbc0deac0c396393bc7cdfbe1dc88f2d084372fc3ec4170ff0d81e8f864680.html">Clean the filters </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 14-01-2023 13:32</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Can Create A New User </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                in the neat administrative page
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e7ad170110a173ec2fac4007b145c30e0c59ae32174c20c5412b66116ae012a4.html">Limpiar Filtros
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Clean the filters
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a24f91628d4dfc382f00d84bc9d09d57bcc3a6fb9ef8c5232a4cced3eeb71b2c.png" title=" Given The user enters to Neat administration page" width="1554"/>
+                <img src="a24f91628d4dfc382f00d84bc9d09d57bcc3a6fb9ef8c5232a4cced3eeb71b2c.png" title=" Juan opens the Homepage" width="1554"/>
+                <img src="dfcf06b3a61819247f7d2e1c197da5ace849fa36ec3528f7f932e05452c4e97b.png" title=" Given The user enters to Neat administration page (completed)" width="1920"/>
+                <img src="54467238e03c5d21279bad46f81b31e97dafa5d7c637b512bf88cced05cef32d.png" title=" When He puts the nekoAdmin and the Admin123" width="1920"/>
+                <img src="54467238e03c5d21279bad46f81b31e97dafa5d7c637b512bf88cced05cef32d.png" title=" Juan insertardatos" width="1920"/>
+                <img src="54467238e03c5d21279bad46f81b31e97dafa5d7c637b512bf88cced05cef32d.png" title=" Juan clicks on Campos para ingresar usuario" width="1920"/>
+                <img src="54467238e03c5d21279bad46f81b31e97dafa5d7c637b512bf88cced05cef32d.png" title=" Juan enters 'nekoAdmin' into Campos para ingresar usuario" width="1920"/>
+                <img src="d9143014862d39e33cfab70fb0d10a6c8a2ed11f1475d295c8132bea91944552.png" title=" Juan enters 'nekoAdmin' into Campos para ingresar usuario (completed)" width="1920"/>
+                <img src="d9143014862d39e33cfab70fb0d10a6c8a2ed11f1475d295c8132bea91944552.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a" width="1920"/>
+                <img src="cfe0155574b33df6ad6a0c7f1f2eae6e8883363b1e82358f89d367f7c3172634.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a (completed)" width="1920"/>
+                <img src="cfe0155574b33df6ad6a0c7f1f2eae6e8883363b1e82358f89d367f7c3172634.png" title=" Juan enters 'Admin123' into Campos para ingresar contrase&ntilde;a" width="1920"/>
+                <img src="9bfe52f8044096a7f553923999d3931fa05b882cd172f09356e7ecfe5ae01946.png" title=" Juan enters 'Admin123' into Campos para ingresar contrase&ntilde;a (completed)" width="1920"/>
+                <img src="9bfe52f8044096a7f553923999d3931fa05b882cd172f09356e7ecfe5ae01946.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a" width="1920"/>
+                <img src="568a48e852919b2d44946cffb79bacd4e4aeae204a2407f060d1c9f216e667c2.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a (completed)" width="1920"/>
+                <img src="0a65a90ed83f000d9db54a94d9a6522bfa94635d2e72b1bba30475992a992fa1.png" title=" Juan insertardatos (completed)" width="1920"/>
+                <img src="0a65a90ed83f000d9db54a94d9a6522bfa94635d2e72b1bba30475992a992fa1.png" title=" When He puts the nekoAdmin and the Admin123 (completed)" width="1920"/>
+                <img src="17f499ea0bbc8631a2f7225b388cf64955a4c1da0bf7d689047013c3f199c4a5.png" title=" And He goes to the user page" width="1920"/>
+                <img src="17f499ea0bbc8631a2f7225b388cf64955a4c1da0bf7d689047013c3f199c4a5.png" title=" Juan clicks on Seleccionar configuracion" width="1920"/>
+                <img src="6dec30b609000dab97a4aa00299b27f8f38b91b3ea5614571a0dc8c2d25be1d9.png" title=" Juan clicks on Seleccionar modulo Gestion de usuarios" width="1920"/>
+                <img src="24a24d2e3bf6744003ee57529b3e28c339613a518bfb948ea613812e12207035.png" title=" Juan clicks on Seleccionar modulo Gestion de usuarios (completed)" width="1920"/>
+                <img src="24a24d2e3bf6744003ee57529b3e28c339613a518bfb948ea613812e12207035.png" title=" And He goes to the user page (completed)" width="1920"/>
+                <img src="e32acae47e2d2f03a5018477a5e254ac40dc5a9f85d99a2558cea4c71676ede6.png" title=" Given He filter the informationU juan" width="1920"/>
+                <img src="e32acae47e2d2f03a5018477a5e254ac40dc5a9f85d99a2558cea4c71676ede6.png" title=" Juan filtrar usuario" width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" Juan clicks on " width="1920"/>
+                <img src="498a333056e19d712a5c0cb6035bb70cbef627b6cb25a0b5abdf7d166537ce6b.png" title=" Juan clicks on  (completed)" width="1920"/>
+                <img src="498a333056e19d712a5c0cb6035bb70cbef627b6cb25a0b5abdf7d166537ce6b.png" title=" Juan enters 'juan' into " width="1920"/>
+                <img src="8cd0b456362a4e4338fa7c4ce97e0792e6f71b3be3dd51187f8821bded4ae683.png" title=" Juan enters 'juan' into  (completed)" width="1920"/>
+                <img src="8cd0b456362a4e4338fa7c4ce97e0792e6f71b3be3dd51187f8821bded4ae683.png" title=" Juan clicks on " width="1920"/>
+                <img src="ec3ceaec1056700aac4dfb0d60ce6bbf1472983025a7b9f90e7ecdd748bcdd32.png" title=" Juan clicks on  (completed)" width="1920"/>
+                <img src="ec3ceaec1056700aac4dfb0d60ce6bbf1472983025a7b9f90e7ecdd748bcdd32.png" title=" Juan filtrar usuario (completed)" width="1920"/>
+                <img src="ec3ceaec1056700aac4dfb0d60ce6bbf1472983025a7b9f90e7ecdd748bcdd32.png" title=" Given He filter the informationU juan (completed)" width="1920"/>
+                <img src="4166e761d77b6d702e9753a327e28f5c37d52a63d04c18b9436a9c34243f2cd4.png" title=" When He sees the user that filter 25" width="1920"/>
+                <img src="4166e761d77b6d702e9753a327e28f5c37d52a63d04c18b9436a9c34243f2cd4.png" title=" Then verificacion filtrado" width="1920"/>
+                <img src="7c6735c713f7f9a14d6fc0e479c1e5ec59f95fefddd3bc07c18e5c66ab91922a.png" title=" Then verificacion filtrado (completed)" width="1920"/>
+                <img src="7c6735c713f7f9a14d6fc0e479c1e5ec59f95fefddd3bc07c18e5c66ab91922a.png" title=" When He sees the user that filter 25 (completed)" width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" And He clean the filter" width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" Juan clicks on " width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" And He clean the filter (completed)" width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" Then He sees all users records 16" width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" Then verificacion filtros limpios" width="1920"/>
+                <img src="2e3aeebe0d07ebdb49eff57bf634ed8abcd2a3494e65e95a88bd8d71a333e52c.png" title=" Then He sees all users records 16 (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.7</span>
+</div>
+</body>
+</html>

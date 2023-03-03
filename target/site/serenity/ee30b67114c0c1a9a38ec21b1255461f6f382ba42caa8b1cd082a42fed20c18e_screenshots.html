@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="82e675925687026cdd16947492698e315a2051c9e04048627e1569531ebb5570.html">The User Can Create A New User</a></span>
+                > <span class="truncate-60"><a
+                    href="ee30b67114c0c1a9a38ec21b1255461f6f382ba42caa8b1cd082a42fed20c18e.html">Edit a user </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 14-01-2023 13:37</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Can Create A New User </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                in the neat administrative page
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="a0e0f8e22fda02958aea8beed8b0f80791c20e9adb40e52f4a5fa15bad5dd2c5.html">Editar Usuario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Edit a user
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a24f91628d4dfc382f00d84bc9d09d57bcc3a6fb9ef8c5232a4cced3eeb71b2c.png" title=" Given The user enters to Neat administration page" width="1554"/>
+                <img src="a24f91628d4dfc382f00d84bc9d09d57bcc3a6fb9ef8c5232a4cced3eeb71b2c.png" title=" Juan opens the Homepage" width="1554"/>
+                <img src="dfcf06b3a61819247f7d2e1c197da5ace849fa36ec3528f7f932e05452c4e97b.png" title=" Given The user enters to Neat administration page (completed)" width="1920"/>
+                <img src="ca5ea27e432a1b97a6c18fd224e9668462c71c164be9dbcb34556c6d65ec299a.png" title=" When He puts the nekoAdmin and the Admin123" width="1920"/>
+                <img src="ca5ea27e432a1b97a6c18fd224e9668462c71c164be9dbcb34556c6d65ec299a.png" title=" Juan insertardatos" width="1920"/>
+                <img src="ca5ea27e432a1b97a6c18fd224e9668462c71c164be9dbcb34556c6d65ec299a.png" title=" Juan clicks on Campos para ingresar usuario" width="1920"/>
+                <img src="ca5ea27e432a1b97a6c18fd224e9668462c71c164be9dbcb34556c6d65ec299a.png" title=" Juan enters 'nekoAdmin' into Campos para ingresar usuario" width="1920"/>
+                <img src="d9143014862d39e33cfab70fb0d10a6c8a2ed11f1475d295c8132bea91944552.png" title=" Juan enters 'nekoAdmin' into Campos para ingresar usuario (completed)" width="1920"/>
+                <img src="d9143014862d39e33cfab70fb0d10a6c8a2ed11f1475d295c8132bea91944552.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a" width="1920"/>
+                <img src="d5624a0900c315d26f401617ee0a4f241036716e8268f6a7fb9a13952ecefa2b.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a (completed)" width="1920"/>
+                <img src="d5624a0900c315d26f401617ee0a4f241036716e8268f6a7fb9a13952ecefa2b.png" title=" Juan enters 'Admin123' into Campos para ingresar contrase&ntilde;a" width="1920"/>
+                <img src="9bfe52f8044096a7f553923999d3931fa05b882cd172f09356e7ecfe5ae01946.png" title=" Juan enters 'Admin123' into Campos para ingresar contrase&ntilde;a (completed)" width="1920"/>
+                <img src="9bfe52f8044096a7f553923999d3931fa05b882cd172f09356e7ecfe5ae01946.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a" width="1920"/>
+                <img src="eda2df9caaace4a389e3b52b07f50d0e29aa1a03e40d9ddc4e802953b1a4016b.png" title=" Juan clicks on Campos para ingresar contrase&ntilde;a (completed)" width="1920"/>
+                <img src="64d95a54703799ce80c0bcb1ece7c2f354d7818f583a84f7b7d17b4e27082794.png" title=" Juan insertardatos (completed)" width="1920"/>
+                <img src="64d95a54703799ce80c0bcb1ece7c2f354d7818f583a84f7b7d17b4e27082794.png" title=" When He puts the nekoAdmin and the Admin123 (completed)" width="1920"/>
+                <img src="81de02acb4fabf85af8ec930a80c7b65e68bc2e92237d7cfe415ca337a836f46.png" title=" And He goes to the user page" width="1920"/>
+                <img src="81de02acb4fabf85af8ec930a80c7b65e68bc2e92237d7cfe415ca337a836f46.png" title=" Juan clicks on Seleccionar configuracion" width="1920"/>
+                <img src="dacb173c3044622bdb190b731679436dfadb5385420e9fa0dde3e42887cb156b.png" title=" Juan clicks on Seleccionar modulo Gestion de usuarios" width="1920"/>
+                <img src="c55972e375370dbad61527df9d92a8529bc137ac1409344e2bd0b5ec44ae603e.png" title=" Juan clicks on Seleccionar modulo Gestion de usuarios (completed)" width="1920"/>
+                <img src="c55972e375370dbad61527df9d92a8529bc137ac1409344e2bd0b5ec44ae603e.png" title=" And He goes to the user page (completed)" width="1920"/>
+                <img src="7392733c597cd8058495846e6289215c01a37bfbb918ef0566c0677a0cd90faa.png" title=" Given He edit the user information 3133232677 and NewPassword1" width="1920"/>
+                <img src="7392733c597cd8058495846e6289215c01a37bfbb918ef0566c0677a0cd90faa.png" title=" Juan editar usuario" width="1920"/>
+                <img src="1509642a7257611cb3599439970813c90a72a1a15e5fd2ae916c5eeca941e3fa.png" title=" Juan clicks on " width="1920"/>
+                <img src="0bb62fd5bc7ae3893027c6c8926c9f69e734c8bee8896183990f096e9dc357ef.png" title=" Juan clicks on  (completed)" width="1920"/>
+                <img src="0bb62fd5bc7ae3893027c6c8926c9f69e734c8bee8896183990f096e9dc357ef.png" title=" Juan enters '3133232677' into " width="1920"/>
+                <img src="f7d7d72d4cd4aec84e98eeaa79c58197be64e2ab0504e647d58daf0876e38cf9.png" title=" Juan enters '3133232677' into  (completed)" width="1920"/>
+                <img src="f7d7d72d4cd4aec84e98eeaa79c58197be64e2ab0504e647d58daf0876e38cf9.png" title=" Juan enters 'NewPassword1' into " width="1920"/>
+                <img src="955f4120bd50b655a77cb33a22aaf1f911089d1137e71326a0db179a4bd1ea43.png" title=" Juan enters 'NewPassword1' into  (completed)" width="1920"/>
+                <img src="955f4120bd50b655a77cb33a22aaf1f911089d1137e71326a0db179a4bd1ea43.png" title=" Juan enters 'NewPassword1' into " width="1920"/>
+                <img src="64258266b08a5d406f87194e41184114294ff5a00d12ceff13dfadca40667cba.png" title=" Juan enters 'NewPassword1' into  (completed)" width="1920"/>
+                <img src="12781a91760b58450b50cb835bf4e311e8491ee79de74d7a6a4800b721ca542d.png" title=" Juan clicks on " width="1920"/>
+                <img src="f0758f17ae8315a282a624dc3ad3d9568d54d5f3f9163fb41c6c2fb358f48a17.png" title=" Juan clicks on  (completed)" width="1920"/>
+                <img src="f0758f17ae8315a282a624dc3ad3d9568d54d5f3f9163fb41c6c2fb358f48a17.png" title=" Juan clicks on " width="1920"/>
+                <img src="d6caf38bfd7cb6d81d8917e33d3cc709028df3692f0ca452ea6cd07421e74ca6.png" title=" Juan clicks on  (completed)" width="1920"/>
+                <img src="d6caf38bfd7cb6d81d8917e33d3cc709028df3692f0ca452ea6cd07421e74ca6.png" title=" Juan editar usuario (completed)" width="1920"/>
+                <img src="d6caf38bfd7cb6d81d8917e33d3cc709028df3692f0ca452ea6cd07421e74ca6.png" title=" Given He edit the user information 3133232677 and NewPassword1 (completed)" width="1920"/>
+                <img src="42090af65723b193ce8cc0f04dba8533e795ab5beed86912fb19781ca8ec1ed5.png" title=" Then He sees the edit succes messageU &Eacute;xitoso" width="1920"/>
+                <img src="42090af65723b193ce8cc0f04dba8533e795ab5beed86912fb19781ca8ec1ed5.png" title=" Then edicion exitosa" width="1920"/>
+                <img src="42090af65723b193ce8cc0f04dba8533e795ab5beed86912fb19781ca8ec1ed5.png" title=" Then edicion exitosa (completed)" width="1920"/>
+                <img src="42090af65723b193ce8cc0f04dba8533e795ab5beed86912fb19781ca8ec1ed5.png" title=" Then He sees the edit succes messageU &Eacute;xitoso (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.7</span>
+</div>
+</body>
+</html>
